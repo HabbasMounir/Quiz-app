@@ -1,0 +1,43 @@
+[
+    {
+     "title":"5*5",
+     "answer_01":10,
+     "answer_02":25,
+     "answer_03":30,
+     "answer_04":20,
+     "answer_RI":25
+},
+    {
+     "title":"5+5",
+     "answer_01":10,
+     "answer_02":25,
+     "answer_03":30,
+     "answer_04":20,
+     "answer_RI":10
+},
+    {
+     "title":"5/5",
+     "answer_01":1,
+     "answer_02":25,
+     "answer_03":30,
+     "answer_04":2,
+     "answer_RI":1
+},
+    {
+     "title":"5**5",
+     "answer_01":10,
+     "answer_02":125,
+     "answer_03":30,
+     "answer_04":20,
+     "answer_RI":125
+},
+    {
+     "title":"15/5",
+     "answer_01":10,
+     "answer_02":5,
+     "answer_03":30,
+     "answer_04":20,
+     "answer_RI":5
+}
+
+]

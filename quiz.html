@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Quiz app</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./design/main.css'>
+
+</head>
+<body>
+    <div class="Quiz-app">
+        <div class="Quiz__info">
+            <div class="category">
+                <span class="category--message">category:</span>  
+                <span class="category--item">Math </span> 
+            </div>
+            <div class="count_down">
+                <span class="minute">0</span>:<span class="minute">30</span>
+            </div>        </div>
+
+        <div class="answer_area " >
+        <div class="Quiz__area">
+            <h2>The area of questions:</h2>
+        </div>
+
+
+
+            <div class="answer ">
+            <input type="radio" name="answer" id="answer_01">
+            <label  for="answer_01">Answer</label>
+        </div>
+            <div class="answer ">
+            <input type="radio" name="answer" id="answer_01">
+            <label class="answer--hover" for="answer_01">hover Answer</label>
+        </div>
+        <div class="answer ">
+            <input type="radio" name="answer" id="answer_02">
+            <label class="answer--active" for="answer_02">active Answer</label>
+        </div>
+            <div class="answer ">
+            <input type="radio" name="answer" id="answer_03">
+            <label class="answer--right" for="answer_02">right Answer </label>
+
+            </div>
+            <div class="answer ">
+            <input type="radio" name="answer" id="answer_04">
+            <label class="answer--wrong " for="answer_04">wrong Answer</label>
+            </div>
+        </div>
+        <button class="submit_Button">submit answer</button>
+
+        <div class="bullets">
+            <div class="span">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+        <script src='main.js'></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+json file with the questions
+css html 
+add dummy data
+- Create The Styling
+- Fetch Number Of Questions From JSON Object 1
+- Show Questions Count + Questions Category |
+- Show The Number Of Bullets Depend on Questions Count
+- Set The Number For The Right and Wrong Answers 1

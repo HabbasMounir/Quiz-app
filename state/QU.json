@@ -1,43 +1,36 @@
 [
     {
-     "title":"5*5",
-     "answer_01":10,
-     "answer_02":25,
-     "answer_03":30,
-     "answer_04":20,
-     "answer_RI":25
+    "title":"the shortest war in human history was between",
+    "answer_01":"America and Vietnam",
+    "answer_02":"England and Zanzibar",
+    "answer_03":"Russian and the Ottoman Empire",
+    "answer_04":"Britain and Egypt",
+    "answer_RI":"England and Zanzibar"
 },
     {
-     "title":"5+5",
-     "answer_01":10,
-     "answer_02":25,
-     "answer_03":30,
-     "answer_04":20,
-     "answer_RI":10
+    "title":"Hitler committed suicide in",
+    "answer_01":"1945",
+    "answer_02":"1908",
+    "answer_03":"1930",
+    "answer_04":"Hitler escaped",
+    "answer_RI":"1945"
 },
     {
-     "title":"5/5",
-     "answer_01":1,
-     "answer_02":25,
-     "answer_03":30,
-     "answer_04":2,
-     "answer_RI":1
+    "title":"The week in ancient Roman times was",
+    "answer_01":"7 days",
+    "answer_02":"4-5days",
+    "answer_03":"8 days",
+    "answer_04":"10 days",
+    "answer_RI":"8 days"
 },
     {
-     "title":"5**5",
-     "answer_01":10,
-     "answer_02":125,
-     "answer_03":30,
-     "answer_04":20,
-     "answer_RI":125
-},
-    {
-     "title":"15/5",
-     "answer_01":10,
-     "answer_02":5,
-     "answer_03":30,
-     "answer_04":20,
-     "answer_RI":5
+    "title":"World War I ended in",
+    "answer_01":"1908",
+    "answer_02":"1845",
+    "answer_03":"1945",
+    "answer_04":"1918",
+    "answer_RI":"1918"
 }
+
 
 ]

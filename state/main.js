@@ -1,5 +1,6 @@
 let   myQuiz=document.getElementById("Quiz--app")
 let myanswers=document.querySelector(".answers")
+
 let bullets=document.querySelector(".bullets")
 let submitButton=document.querySelector(".submit_Button")
 
@@ -26,7 +27,20 @@ myReauest.onreadystatechange=function () {
         bulletsCreator(QuestionCounter)
 
         // add Data
-        addQuestionData(Question[QuestionCount],QuestionCounter);
+        addQuestionData(Question[QuestionCount]);
+
+        //click on submit
+      submitButton.onclick = () => {
+        // GET RIGHT ANSWER:
+        let rightAnswer = Question[QuestionCount].rightanswer;
+        console.log(rightAnswer)
+
+        
+
+        
+
+
+};
     }
 }
 
@@ -48,15 +62,30 @@ function bulletsCreator(num) {
             // creat span
         let    bullet=document.createElement("span")
 
-        i===QuestionCount  ?bullet.className="bullet--active":"";
+        i<=QuestionCount  ?bullet.className="bullet--active":"";
         bullets.appendChild(bullet)
 
     }
 }
-function addQuestionData(obj,Count){
+function addQuestionData(obj){
+
     console.log(obj);
     let QuestionTitle=document.createElement("h2");
     QuestionTitle.innerHTML=`${obj["title"]} :`
     QuestionArea.appendChild(QuestionTitle);
 
+
+    let answrSize=Object.keys(obj).length-2  //2(title + Right answer)
+    // answer
+
+    for(i=1;i<=answrSize;i++){
+        console.log(i)
+    let QuestionAnswer=document.createElement("div");
+        QuestionAnswer.className="answer" 
+        QuestionAnswer.innerHTML=`
+                                    <input type="radio" name="answer" id="answer_0${i}">
+                                    <label  for="answer_0${i}">${obj[`answer_0${i}`]}</label>
+                                `
+        myanswers.appendChild(QuestionAnswer);
+    }
 }

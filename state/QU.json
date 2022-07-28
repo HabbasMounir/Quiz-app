@@ -1,11 +1,12 @@
 [
     {
     "title":"the shortest war in human history was between",
+    "rightanswer":"England and Zanzibar" ,
     "answer_01":"America and Vietnam",
     "answer_02":"England and Zanzibar",
     "answer_03":"Russian and the Ottoman Empire",
-    "answer_04":"Britain and Egypt",
-    "answer_RI":"England and Zanzibar"
+    "answer_04":"Britain and Egypt"
+
 },
     {
     "title":"Hitler committed suicide in",
@@ -13,7 +14,7 @@
     "answer_02":"1908",
     "answer_03":"1930",
     "answer_04":"Hitler escaped",
-    "answer_RI":"1945"
+    "rightanswer":"1945"
 },
     {
     "title":"The week in ancient Roman times was",
@@ -21,7 +22,7 @@
     "answer_02":"4-5days",
     "answer_03":"8 days",
     "answer_04":"10 days",
-    "answer_RI":"8 days"
+    "rightanswer":"8 days"
 },
     {
     "title":"World War I ended in",
@@ -29,7 +30,7 @@
     "answer_02":"1845",
     "answer_03":"1945",
     "answer_04":"1918",
-    "answer_RI":"1918"
+    "rightanswer":"1918"
 }
 
 

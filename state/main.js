@@ -33,11 +33,11 @@ myReauest.onreadystatechange=function () {
       submitButton.onclick = () => {
         // GET RIGHT ANSWER:
         let rightAnswer = Question[QuestionCount].rightanswer;
-        console.log(rightAnswer)
 
+        QuestionCount++
         
-
-        
+        // check
+        checkRightnswer(rightAnswer,QuestionCounter);
 
 
 };
@@ -53,7 +53,9 @@ myReauest.send();
 
 
 }
+
 getQuestion()
+
 
 function bulletsCreator(num) {
 
@@ -88,4 +90,8 @@ function addQuestionData(obj){
                                 `
         myanswers.appendChild(QuestionAnswer);
     }
+}
+function checkRightnswer(rigAns,QueCou){
+    console.log(rigAns)
+    console.log(QueCou)
 }

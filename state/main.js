@@ -39,7 +39,6 @@ myReauest.onreadystatechange=function () {
         // check
         checkRightnswer(rightAnswer,QuestionCounter);
 
-
 };
     }
 }
@@ -84,14 +83,53 @@ function addQuestionData(obj){
         console.log(i)
     let QuestionAnswer=document.createElement("div");
         QuestionAnswer.className="answer" 
-        QuestionAnswer.innerHTML=`
-                                    <input type="radio" name="answer" id="answer_0${i}">
-                                    <label  for="answer_0${i}">${obj[`answer_0${i}`]}</label>
-                                `
+
+                        // Create Radio Input
+      let radioInput = document.createElement("input");
+
+      // Add Type + Name + Id + Data-Attribute
+      radioInput.name = "answer";
+      radioInput.type = "radio";
+      radioInput.id = `answer_0${i}`;
+      radioInput.dataset.answer = obj[`answer_0${i}`];
+
+      // Make First Option Selected
+      if (i === 1) {
+        radioInput.checked = true;
+      }
+
+      // Create Label
+      let theLabel = document.createElement("label");
+      theLabel.className=`label_0${i}`
+      // Add For Attribute
+      theLabel.htmlFor = `answer_0${i}`;
+
+      // Create Label Text
+      let theLabelText = document.createTextNode(obj[`answer_0${i}`]);
+
+      // Add The Text To Label
+      theLabel.appendChild(theLabelText);
+
+      // Add Input + Label To Main Div
+      QuestionAnswer.appendChild(radioInput);
+      QuestionAnswer.appendChild(theLabel);
+
+      // Append All Divs To Answers Area
         myanswers.appendChild(QuestionAnswer);
+
     }
 }
 function checkRightnswer(rigAns,QueCou){
+    let answers=document.getElementsByName("answer")
+    // console.log(answers)
+    let choosenAnswer;
+    for(let i=0; i <answers.length; i++){
+        if(answers[i].checked === true){
+            choosenAnswer=answers[i].dataset.answer
+        }        
+
+    }
+
     console.log(rigAns)
-    console.log(QueCou)
+    console.log(choosenAnswer)
 }

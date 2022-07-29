@@ -5,7 +5,7 @@
     --glassColor:rgba(0, 0, 0, 0.075);
 
     --border: 1px solid rgba(240, 240, 240, 0.1);
-    --active:hsla(250, 20%, 64%, 0.233);
+    --active:hsla(0, 0%, 100%, 0.274);
     --right:hsla(356, 100%, 66%, 0.637);
     --wrong:hsla(208, 49%, 24%, 0.582);
 }
@@ -113,7 +113,7 @@ body{
    backdrop-filter: blur(1px);
     box-shadow: 15px 15px 50px -10px rgba(0, 0, 0, 0.281) ;
 }
-.answer_area .answer--active{
+.answer_area  .answer input[type="Radio"]:checked + label{
     background-color: var(--active);
     backdrop-filter: blur(10px);
     box-shadow: 15px 15px 50px -10px rgba(0, 0, 0, 0.329) ;

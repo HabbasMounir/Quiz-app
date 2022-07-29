@@ -32,12 +32,7 @@ body{
     width: 500px;
 
 }
-@media screen and (max-width: 500px) {
-    .Quiz-app{
-        width: 90vw;
-    }
 
-}
 
 .Quiz__info{
     color: var(--main-color); 
@@ -113,7 +108,7 @@ body{
    backdrop-filter: blur(1px);
     box-shadow: 15px 15px 50px -10px rgba(0, 0, 0, 0.281) ;
 }
-.answer_area  .answer input[type="Radio"]:checked + label{
+.answer_area  .answer input[type="Radio"]:checked + .labele--active{
     background-color: var(--active);
     backdrop-filter: blur(10px);
     box-shadow: 15px 15px 50px -10px rgba(0, 0, 0, 0.329) ;
@@ -194,4 +189,18 @@ body{
     opacity: 1;
     backdrop-filter: blur(0px);
     -webkit-backdrop-filter: blur(0px); 
+}
+@media screen and (max-width: 500px) {
+
+    .Quiz-app{
+        width: 90vw;
+    }
+
+}
+@media screen and (max-width: 850px) {
+    body{
+        background-position:-20px 2vh ;
+        background-attachment:fixed  ;
+    }
+
 }

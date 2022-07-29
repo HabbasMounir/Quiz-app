@@ -1,14 +1,11 @@
 let   myQuiz=document.getElementById("Quiz--app")
 let myanswers=document.querySelector(".answers")
-
 let bullets=document.querySelector(".bullets")
 let submitButton=document.querySelector(".submit_Button")
-
-let QuestionCount=0;
 let   QuestionArea=document.getElementById("Quiz__area")
 
-
-
+let QuestionCount=0;
+let rightAnswers=0;
 
 
 
@@ -34,7 +31,7 @@ myReauest.onreadystatechange=function () {
         // GET RIGHT ANSWER:
         let rightAnswer = Question[QuestionCount].rightanswer;
 
-        QuestionCount++
+        // QuestionCount++
         
         // check
         checkRightnswer(rightAnswer,QuestionCounter);
@@ -85,34 +82,34 @@ function addQuestionData(obj){
         QuestionAnswer.className="answer" 
 
                         // Create Radio Input
-      let radioInput = document.createElement("input");
+    let radioInput = document.createElement("input");
 
       // Add Type + Name + Id + Data-Attribute
-      radioInput.name = "answer";
-      radioInput.type = "radio";
-      radioInput.id = `answer_0${i}`;
-      radioInput.dataset.answer = obj[`answer_0${i}`];
+    radioInput.name = "answer";
+    radioInput.type = "radio";
+    radioInput.id = `answer_0${i}`;
+    radioInput.dataset.answer = obj[`answer_0${i}`];
 
       // Make First Option Selected
-      if (i === 1) {
+    if (i === 1) {
         radioInput.checked = true;
-      }
+    }
 
       // Create Label
-      let theLabel = document.createElement("label");
-      theLabel.className=`label_0${i}`
+    let theLabel = document.createElement("label");
+    theLabel.className=`labele--active`
       // Add For Attribute
-      theLabel.htmlFor = `answer_0${i}`;
+    theLabel.htmlFor = `answer_0${i}`;
 
       // Create Label Text
-      let theLabelText = document.createTextNode(obj[`answer_0${i}`]);
+    let theLabelText = document.createTextNode(obj[`answer_0${i}`]);
 
       // Add The Text To Label
-      theLabel.appendChild(theLabelText);
+    theLabel.appendChild(theLabelText);
 
       // Add Input + Label To Main Div
-      QuestionAnswer.appendChild(radioInput);
-      QuestionAnswer.appendChild(theLabel);
+    QuestionAnswer.appendChild(radioInput);
+    QuestionAnswer.appendChild(theLabel);
 
       // Append All Divs To Answers Area
         myanswers.appendChild(QuestionAnswer);
@@ -124,12 +121,23 @@ function checkRightnswer(rigAns,QueCou){
     // console.log(answers)
     let choosenAnswer;
     for(let i=0; i <answers.length; i++){
+            let  labels=document.querySelectorAll("label")
+
+        labels[i].classList.remove("answer--wrong")            
+        labels[i].classList.remove("answer--right")   
+
         if(answers[i].checked === true){
+
             choosenAnswer=answers[i].dataset.answer
-        }        
 
+        if (choosenAnswer===rigAns) {
+            labels[i].classList.add("answer--right")
+        } else{
+            labels[i].classList.add("answer--wrong")
+        }
+        answers[i].checked = false;
+        }
     }
-
     console.log(rigAns)
     console.log(choosenAnswer)
 }

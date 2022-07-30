@@ -3,10 +3,10 @@ let myanswers=document.querySelector(".answers")
 let bullets=document.querySelector(".bullets")
 let submitButton=document.querySelector(".submit_Button")
 let   QuestionArea=document.getElementById("Quiz__area")
-
+let countdownSpan=document.querySelector(".count_down")
 let QuestionCount=0;
 let rightAnswers=0;
-let bulletArry=[];
+let bulletArry=[""];
 
 
 function getQuestion() {
@@ -142,14 +142,16 @@ function checkRightnswer(rigAns,QueCou){
           rightAnswers++;
             labels[i].classList.add("answer--right")
             bulletArry[bulletArry.length]=true;
+            bulleter[QuestionCount].className="bullet--right"
         } else{
             labels[i].classList.add("answer--wrong")
             bulletArry[bulletArry.length]=false;
+            bulleter[QuestionCount].className="bullet--wrong"
         }
-        answers[i].checked = false;
-        bulletArry[i]===true  ?bulleter[QuestionCount].className="bullet--right":bulleter[QuestionCount].className="bullet--wrong";
-        QuestionCount+1 <bulleter.length ?bulleter[QuestionCount+1].className="bullet--active":"";
 
+
+        QuestionCount+1 <bulleter.length ?bulleter[QuestionCount+1].className="bullet--active":"";
+        answers[i].checked = false;
         
       }
     }
@@ -160,8 +162,54 @@ function checkRightnswer(rigAns,QueCou){
 
 function ShowResulte(Counter){
 if(QuestionCount===Counter){
-console.log("ydek fih")
-submitButton.style.display="none"
+let resultMessage;
+
+    if (rightAnswers==0) {
+  resultMessage="Do you even know your birthday";
+
+    }else if(rightAnswers>Counter/2 && rightAnswers < Counter) {
+      resultMessage="Very well";
+    } else if(rightAnswers== Counter) {
+      resultMessage="GG ";
+    }else{
+      resultMessage="At least you tried";
+    }
+console.log(rightAnswers)
+console.log(resultMessage)
+QuestionArea.remove();
+submitButton.remove();
+
+
+myanswers.classList.add("result")
+myanswers.innerHTML=`
+<div class="resultMessage">${resultMessage}</div>
+<div class="result__number">
+<span class="result__numberHand">${rightAnswers}</span>/${Counter}
+</div> 
+`
+  
+
+let resultHand=document.querySelector(".result__numberHand")
+if(rightAnswers== 0) {
+  resultHand.style.color=" var(--noHand)";
+}else if(rightAnswers>Counter/2 && rightAnswers < Counter) {
+  resultHand.style.color=" var(----right)";
+
+  } else if(rightAnswers== Counter) {
+    resultHand.style.color=" var(--perfect)";
+  }else{
+    resultHand.style.color=" var(--wrong)";
+  }
+
 }
 }
 
+function countDown(duration,QuCounter) {
+  if ( QuestionCount<QuCounter) {
+let minutes ,seconds;
+countdownInterval=setInterval(() => {
+  minutes=parseInt(duration/60)
+  seconds=parseInt(duration%60)
+}, 1000);
+}
+}

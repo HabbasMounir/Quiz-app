@@ -8,6 +8,9 @@
     --active:hsla(0, 0%, 100%, 0.103);
     --right:hsla(356, 100%, 66%, 0.637);
     --wrong:hsla(208, 49%, 24%, 0.582);
+    --perfect:hsla(356, 80%, 56%, 0.637);
+    --noHand:hsla(0, 0%, 0%, 0.178);
+
 }
 
 *{
@@ -211,4 +214,30 @@ body{
         background-attachment:fixed  ;
     }
 
+}
+
+
+
+
+
+
+.result{
+    box-sizing: border-box ;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;    
+    gap: 5px;
+    color: var(--main-color); 
+    font-size: 22px;
+    font-weight:500 ;
+
+}
+.result__number{
+    font-weight:400 ;
+    font-size: 20px;
+}
+.result__numberHand{
+    font-weight:700 ;
+    font-size: 24px;
 }

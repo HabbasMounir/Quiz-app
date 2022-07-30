@@ -2,10 +2,10 @@
 :root{
     --body-back:hsla(13, 100%, 72%, 0.842);
     --main-color:hsla(240, 10%, 16%, 0.705);
-    --glassColor:rgba(0, 0, 0, 0.075);
+    --glassColor:rgba(48, 34, 85, 0.089);
 
     --border: 1px solid rgba(240, 240, 240, 0.1);
-    --active:hsla(0, 0%, 100%, 0.274);
+    --active:hsla(0, 0%, 100%, 0.103);
     --right:hsla(356, 100%, 66%, 0.637);
     --wrong:hsla(208, 49%, 24%, 0.582);
 }
@@ -14,6 +14,9 @@
     font-family: 'Overpass', sans-serif;
     box-sizing:border-box;
     margin: 0;
+    user-select: none;
+
+    -webkit-user-drag: none;
 }
 body{
     background:var(--body-back) url("./images/bg-pattern-intro-mobile.svg") ;
@@ -49,11 +52,15 @@ body{
      text-shadow: 0px 0px 0px hsla(240, 10%, 16%, 0.377);
 }
 
-.category--item{
-       opacity: 1; 
-       font-size: 22px;
-       font-weight: 900;
+    a.category--item{
+        opacity: 1; 
         text-shadow: 1px 1px 2px rgba(78, 16, 9, 0.267);
+            color: var(--main-color); 
+            text-decoration: none;
+            font-size: 2.75vh;
+            font-weight: 700;
+            padding-left: 3px;
+
 }
 .count_down{
     flex: 1;
@@ -152,7 +159,7 @@ body{
 }
 .bullets   .bullet--active{
     background-color: var(--active);
-    cursor: none;
+
 }
 .bullets   .bullet--active:hover{
     background-color: var(--active);
@@ -169,6 +176,7 @@ body{
 
 
 .submit_Button{
+    cursor:pointer;
     margin-top: 15px;
     overflow: hidden;
     width: 100%;

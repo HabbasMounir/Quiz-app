@@ -10,8 +10,8 @@
 },
     {
     "title":"Hitler committed suicide in",
-    "answer_01":"1945",
-    "answer_02":"1908",
+    "answer_01":"1908",
+    "answer_02":"1945",
     "answer_03":"1930",
     "answer_04":"Hitler escaped",
     "rightanswer":"1945"
@@ -23,6 +23,14 @@
     "answer_03":"8 days",
     "answer_04":"10 days",
     "rightanswer":"8 days"
+},
+    {
+    "title":"Peloponnesian War was between Athens and",
+    "answer_01":"Troy",
+    "answer_02":"Corinth",
+    "answer_03":"Mycenae",
+    "answer_04":"Sparta",
+    "rightanswer":"Sparta"
 },
     {
     "title":"World War I ended in",

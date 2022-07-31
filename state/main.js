@@ -3,11 +3,13 @@ let myanswers=document.querySelector(".answers")
 let bullets=document.querySelector(".bullets")
 let submitButton=document.querySelector(".submit_Button")
 let   QuestionArea=document.getElementById("Quiz__area")
-let countdownSpan=document.querySelector(".count_down")
+let countdownElement=document.querySelector(".count_down")
+
+
 let QuestionCount=0;
 let rightAnswers=0;
 let bulletArry=[""];
-
+let secondsTime=30;
 
 function getQuestion() {
 
@@ -23,29 +25,34 @@ myReauest.onreadystatechange=function () {
         // add Data
         addQuestionData(Question[QuestionCount],QuestionCounter);
 
+                countDown(secondsTime,QuestionCounter)
+
+
         //click on submit
       submitButton.onclick = () => {
+
+        // countdownElement.innerHTML=""
+
+        clearInterval(countdownInterval)
+        countDown(secondsTime,QuestionCounter)
+
         // GET RIGHT ANSWER:
         let rightAnswer = Question[QuestionCount].rightanswer;
 
 
         // check
                 checkRightnswer(rightAnswer,QuestionCounter);
-
-
                   QuestionCount++
-        
-
-
         // remove
         // bullets.innerHTML=""
         myanswers.innerHTML=""
         QuestionArea.innerHTML=""
-
-
-
         addQuestionData(Question[QuestionCount],QuestionCounter); 
+
+
+
         ShowResulte(QuestionCounter);
+
 };  
     }
 }
@@ -178,8 +185,8 @@ console.log(rightAnswers)
 console.log(resultMessage)
 QuestionArea.remove();
 submitButton.remove();
-
-
+countdownElement.remove()
+bullets.classList.add("bulletsend")
 myanswers.classList.add("result")
 myanswers.innerHTML=`
 <div class="resultMessage">${resultMessage}</div>
@@ -210,6 +217,18 @@ let minutes ,seconds;
 countdownInterval=setInterval(() => {
   minutes=parseInt(duration/60)
   seconds=parseInt(duration%60)
-}, 1000);
+
+  minutes=minutes<10?`0${minutes}`:minutes;
+  seconds=seconds<10?`0${seconds}`:seconds;
+
+  countdownElement.innerHTML=`
+    ${minutes}:${seconds}
+  `
+  if(--duration<0){
+    clearInterval(countdownInterval)
+    console.log("time yo")
+    submitButton.click()
+  }
+}, 900);
 }
 }

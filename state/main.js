@@ -181,8 +181,6 @@ let resultMessage;
     }else{
       resultMessage="At least you tried";
     }
-console.log(rightAnswers)
-console.log(resultMessage)
 QuestionArea.remove();
 submitButton.remove();
 countdownElement.remove()
